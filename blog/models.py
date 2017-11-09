@@ -7,7 +7,7 @@ from django.utils import timezone
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
-    image = models.ImageField(upload_to=None,blank=True,verbose_name='Загрузить изображение поста')
+    image = models.ImageField(upload_to='static',blank=True,verbose_name='Загрузить изображение поста')
     title = models.CharField(max_length=400)
     text = models.TextField()
     created_date = models.DateTimeField(
