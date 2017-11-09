@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'l$cc2b@q4y*0ku5up#8n@y@4b@6yvbn)$-l!v1pwqcqzj&@-&p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['dev.survivalclub.ru']
 
@@ -118,4 +118,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_URL = '/static/'
-STATIC_ROOT = "/home/a/autovog/dev.survivalclub.ru/public_html/static/"
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
