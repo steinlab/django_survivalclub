@@ -3,11 +3,12 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.utils import timezone
+from PIL import Image
 
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
-    image = models.ImageField(upload_to='static',blank=True,verbose_name='Загрузить изображение поста')
+    image = models.ImageField(upload_to='images',blank=True,verbose_name='Загрузить изображение поста')
     title = models.CharField(max_length=400)
     text = models.TextField()
     created_date = models.DateTimeField(
